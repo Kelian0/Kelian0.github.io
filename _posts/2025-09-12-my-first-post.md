@@ -2,7 +2,7 @@
 layout: post
 toc: true
 title: "This is my first post"
-categories: junk
+categories: carreer
 tags: [markdown, css, html]
 author:
   - Kélian Pons

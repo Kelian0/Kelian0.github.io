@@ -2,7 +2,7 @@
 layout: post
 toc: true
 title: "The link to my business card"
-categories: junk
+categories: ressources
 tags: [markdown, css, html]
 author:
   - Kélian Pons
