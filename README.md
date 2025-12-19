@@ -1,4 +1,9 @@
-# Hamilton <!-- omit in toc -->
+# My Personal Site
+
+>link: https://kelian0.github.io/
+
+
+### Hamilton <!-- omit in toc -->
 
 A minimal and beautiful Jekyll theme best for writing and note-taking.
 
@@ -7,7 +12,7 @@ The original purpose of this theme is to be a replacement of the default Jekyll 
 Please check out the [demo](https://ngzhio.github.io/jekyll-theme-hamilton/).
 
 
-## Features <!-- omit in toc -->
+### Features <!-- omit in toc -->
 
 - [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)
 - [Jekyll Feed](https://github.com/jekyll/jekyll-feed)
@@ -22,7 +27,7 @@ Please check out the [demo](https://ngzhio.github.io/jekyll-theme-hamilton/).
 - Customizable styles and skins
 - Archive pages implemented in pure Liquid
 
-## Table of Contents <!-- omit in toc -->
+### Table of Contents <!-- omit in toc -->
 
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -38,7 +43,7 @@ Please check out the [demo](https://ngzhio.github.io/jekyll-theme-hamilton/).
   - [More Customized Styles](#more-customized-styles)
 - [License](#license)
 
-## Installation
+### Installation
 
 You can choose one of the following methods to install Hamilton:
 
@@ -64,7 +69,7 @@ You can choose one of the following methods to install Hamilton:
         remote_theme: ngzhio/jekyll-theme-hamilton
         ```
 
-## Configuration
+### Configuration
 
 After installation, you can run `jekyll serve` to check out your site, but before that, *make sure* the below **required parameters** are configured in your `_config.yml`.
 
@@ -88,7 +93,7 @@ After installation, you can run `jekyll serve` to check out your site, but befor
 | `date_format` | string | The date format; The default value is `%b %-d, %Y`. |
 | `subscribe` | boolean | Show the subsribe feed button. |
 
-## Archive Pages
+### Archive Pages
 
 Hamilton implements some archive templates in pure Liquid. For example, if you want to create a category archive page, set the below parameters on that page:
 
