@@ -19,13 +19,13 @@ layout: default
           {{ mdate | date: date_format }}
         </time>
       {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
+      {% if page.duration %}
+      &nbsp; • &nbsp; <span><i class="far fa-clock"></i> {{ page.duration }}</span>
+      {% endif %}
+      {%- if page.location -%}
+      &nbsp; • &nbsp; <span><i class="fas fa-map-marker-alt"></i> {{ page.location }}</span>
       {%- endif -%}
+
     </p>
 
   </header>
@@ -35,35 +35,6 @@ layout: default
   </div>
 
   <footer class="post-footer">
-    {% if page.categories.size > 0 %}
-      <div class="post-meta">
-        <i class="fas fa-folder"></i>
-        <ul class="post-taxonomies post-categories">
-          {% assign categories = page.categories | sort %}
-          {% for category in categories %}
-            <li class="post-category">
-              {% assign slugified_category = category | slugify %}
-              <a href="{{ '/categories/#:category' | replace: ':category', slugified_category | relative_url }}">{{ category }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-
-    {% if page.tags.size > 0 %}
-      <div class="post-meta">
-        <i class="fas fa-tags"></i>
-        <ul class="post-taxonomies post-tags">
-          {% assign tags = page.tags | sort %}
-          {% for tag in tags %}
-            <li class="post-tag">
-              {% assign slugified_tag = tag | slugify %}
-              <a href="{{ '/tags/#:tag' | replace: ':tag', slugified_tag | relative_url }}">{{ slugified_tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
 
     <nav class="post-pagination" role="navigation">
       {% if page.previous %}

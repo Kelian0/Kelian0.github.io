@@ -1,9 +1,7 @@
 ---
 layout: post
-toc: true
 title: "The link to my business card"
-categories: ressources
-tags: [markdown, css, html]
+categories: resources
 author:
   - Kélian Pons
 ---
