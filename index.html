@@ -1,3 +1,68 @@
 ---
-layout: home
+layout: page
+title: Career
 ---
+
+<h2>Experience</h2>
+<ul class="post-list" style="margin-bottom: 3rem;">
+  {% for post in site.categories.career %}
+    {% if post.tags contains 'exp_pro' %}
+      <li style="margin-bottom: 2rem;">
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+
+        <p class="post-meta" style="margin-bottom: 5px;">
+          <span><i class="far fa-calendar-alt"></i> {{ post.date | date: "%B %Y" }}</span>
+          
+          {% if post.duration %}
+            &nbsp; • &nbsp; <span><i class="far fa-clock"></i> {{ post.duration }}</span>
+          {% endif %}
+          
+          {% if post.location %}
+            &nbsp; • &nbsp; <span><i class="fas fa-map-marker-alt"></i> {{ post.location }}</span>
+          {% endif %}
+        </p>
+
+        {%- if post.excerpt -%}
+          <div class="post-excerpt">{{ post.excerpt | strip_html }}</div>
+        {%- endif -%}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<hr />
+
+<h2>Education</h2>
+<ul class="post-list">
+  {% for post in site.categories.career %}
+    {% if post.tags contains 'formation' %}
+      <li style="margin-bottom: 2rem;">
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+
+        <p class="post-meta" style="margin-bottom: 5px;">
+          <span><i class="far fa-calendar-alt"></i> {{ post.date | date: "%B %Y" }}</span>
+
+          {% if post.duration %}
+            &nbsp; • &nbsp; <span><i class="far fa-clock"></i> {{ post.duration }}</span>
+          {% endif %}
+
+          {% if post.location %}
+            &nbsp; • &nbsp; <span><i class="fas fa-map-marker-alt"></i> {{ post.location }}</span>
+          {% endif %}
+        </p>
+
+        {%- if post.excerpt -%}
+          <div class="post-excerpt">{{ post.excerpt | strip_html }}</div>
+        {%- endif -%}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
